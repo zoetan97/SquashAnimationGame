@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/appstyle.css">
+        <!--  Include the raphael library from the jslibs directory  -->
+        <script type="text/javascript" data-main="appscripts/main.js" src="jslibs/require.js"> </script>
+        <title>weekly project diaries</title>
+    </head>
+
+  <body>
+    <header>Entries</header>
+    <div id='main'>
+
+        <div id="centerDiv"> 
+        <h2> Week 1 March 20</h2>
+    <p> I brainstormed on possible ideas that i would like to do for this project, and decided that I wanted to do a game. An idea that i came up with was an interactive game of pictionary, where one user draws something and another user can guess what it is via the chatbox. Another was to create a game that incorporates the concept of squash, where the game ends when the ball hits bottom wall. I decided to go with the squash concept game, where the balls can bounce off the walls and there will be a paddle or slider that it used to hit the ball. If the ball touches the bottom, the game ends.</p>
+
+    <h2>Week 2 March 27</h2>
+    <p> I copied the starting template of our previous homework over, and cleared out the content. I began by making a raphael paper on the center portion and setting the fill of it so that it can listen for events. I made a circle at the center of the page, as well as a slider that the ball can bouce off of. I made the ball move around as well as for it to bounce off the walls when it touches the walls. I also made the game end when the ball hits the bottom wall. I made controls for the slider by creating buttons on the html page using the input tag, and created variables on main.js to store these controls. I also made the buttons listen for click events, which will then update the position of the slider and move it right or left accordingly. I did that by setting properties xrate and xpos on the slider and updated the position of the slider with each click. 
+    </p>
+
+    <h2> Week 3 April 3</h2>
+    <p>  I decided that i wanted the balls to bounce off the walls the moment the circumference, not the center, of it was in contact with the wall. Currently, it looked like the ball was sinking in to the wall before bouncing off and i did not want that. I decided to It was a little tough trying to figure it out as it required a little bit of thinking. I managed to figure it out by minusing the radius from the width of the paper, and using the if statements as per usual with this new value, and it works. I also made the ball bounce off the slider when it comes into contact with it and this also required a bit of thinking, and i didn't know where to start as there seemed to be so many conditions that are involved. With a little bit of help from the internet, I managed to figure it out with the use of boolean operators as well as using if and else if statements and nesting the statements in each other, so that the game ends if the ball hits the bottom wall instead of the slider. I made an alert come up saying that the game is over when that happens.  
+    </p>
+
+    <h2> Week 4 April 10 </h2>
+    <p> I added a start button to the page, and added an event listener on it to listen for clicks, which will then run the callback function that will start the game, and get the ball moving. Next, I decided that I wanted to spice things up and make the game a little more interesting by adding some obstacles to the game, or rather just bricks that the ball could collide with and destroy. I made 3 more rectangles on the raphael paper and set their fill to a random colour by making a hsl colour string using the math.random function. Then, I set properties xrates and xpos on them to make them move in the horizontal direction by updating their positions in the draw function and calling the draw function in 34ms  intervals. I also made the bricks bounce back and forth off the walls by reversing their xrates. Next i made a few more if statements in the draw function to detect for collisions between the ball and the brick. This was tricky and a little bit of a challenge as many conditions needed to be met, such as the detection of the ball is not only on one side but 2, top and bottom, and the ball had to change its direction upon collision. Not only that, I also wanted the bricks to disappear after the ball collides with them. I could not figure it out even after trying for some time so I decided that I'll try again next week.  </p>
+    
+    <h2> Week 5 April 17 </h2>
+    <p> This week I continued where i left off, and googled a little bit to see if i can solve the problem that i had with the collisions between the ball and the bricks. After a while, I found the solution and created if statements with boolean operators to include more than 1 condition, as well as to further nest another if statement with boolean operators within the first if statement, before reversing the yrate of the ball, and causing the bricks to disappear using the hide function. I also made it such that an alert will pop up indicating that the player wins when the last brick is hit. Other than that, to make it more interactive, i also added hsl sliders at the side so that the ball will change its colour as the user moves the sliders. I also added separated the background into 2 colours to make it more colourful and bright. </p>
+    
+
+
+
+    </p>
+ </div>  <!--  <article>   article  </article> --->
+
+    </div>
+    <footer>Credits:
+        <p> I did this! </p>
+    </footer>
+  </body>
+</html>
+

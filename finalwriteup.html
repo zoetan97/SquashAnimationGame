@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/appstyle.css">
+        <!--  Include the raphael library from the jslibs directory  -->
+        <script type="text/javascript" data-main="appscripts/main.js" src="jslibs/require.js"> </script>
+        <title>Final Write Up</title>
+    </head>
+
+  <body>
+    <header> The Journey </header>
+    <div id='main'>
+
+        <div id="centerDiv"> 
+        <h2> Final Write Up </h2>
+
+    <p> I created a game that takes after a squash like concept, where the user gets to move the slider using the controls at the side to make the ball bounce around and destroy obstacles in its way. I chose to create this game as it allows me to incorporate a diverse range of skills and techniques that have been taught in this class. Not only that, I also learnt certain operators and skills that have not been used in this module, and incorporated them into the code of this game as well. I got my inspiration for this game from the arcade and video games we used to play, where there were bricks or obstacles that you could destroy using a shooting cannon or some sort of weapon. In this case, i decided to make some coloured blocks as the obstacles and make them such that when the ball hits the blocks, these blocks disappear. The goal of the game is to make all the blocks disappear and to not die prematurely. </p>
+
+
+    <p> What I did to create this game was that I made use of  SVG using raphael in main.js, and drew the objects like the ball, obstacles (which are the moving bricks), and slider on the raphael paper. I started by using the layout page/template that we always use in class and removed all the content to add on my own code for the game. I made use of the skills we learnt in class to make the bricks or obstacles move, by setting their xrates and updating their positions every few milliseconds, so that it is harder to destroy them. I also made the bricks bounce off the walls if they have yet to be destroyed. I did the same with the ball (which is the object that will be used to destroy the bricks), and I made it such that the ball bounces off the left, right and top wall by changing their rates  to the negative value of what was set before so that they would travel in the reverse direction. 
+    </p>
+
+    <p>When the ball hits the bottom wall, the game ends. Hence, to ensure that the player does not die prematurely, the player has to control the slider using the control buttons at the info bar, so that the ball can bounce off the slider into the playing space again. Also, I made it such that when the ball bounces off the walls, it bounces at the point where the circumference of the ball touches the wall and not where the center of the ball touches the walls. To do this, I had to set up a bunch of ‘if’ statements using the boolean operators like && and ||, where a number of conditions have to be met before the ball bounces off the slider, and off  the walls. For example, if the x position of the ball is more than the width of the paper minus the radius of the ball, then the ball has to bounce off and change its direction. The same concept was used for when the ball hits the bricks. ‘If’ statements and boolean operators && were used to change the direction of the ball as well as to hide the bricks using the built-in hide function. This makes the bricks seem like they were ‘destroyed’ by the ball. If I did not use boolean operators, I could also nest the ‘if’ statements into each other and it worked as well. 
+    </p>
+
+    <p> If given more time, I would make more obstacles by constructing an array, and making a while loop such that the code keeps running till the count has reached the maximum count set. Having more obstacles in the game will make it more fun and harder to play. I would also love to learn the keyboard events that my objects can listen for, and how to make my objects listen for them. I would then replace the controls with the pressing of the arrow keys on the keyboard, instead of just clicking the buttons on the screen. I attempted to use the arrow keys by adding event listeners on my slider object, and using keyup and keydown, as well as using the key codes for the arrow keys, but it did not work out well and my slider could not listen for them. Therefore, I went with the simpler option of creating buttons that listens for clicks on the html page. </p>
+
+    <p>This game is simple but reminiscent of the childhood games we used to play and it incorporates a diverse range of skills and techniques that have been taught throughout this module. There are many more features that can be included in the game that can make the game more fun and interactive, and with time, these things can be learnts and added. </p>
+
+    <h2> 
+
+
+
+    </p>
+ </div>  <!--  <article>   article  </article> --->
+
+    </div>
+    <footer>Credits:
+        <p> I did this! </p>
+    </footer>
+  </body>
+</html>
+
